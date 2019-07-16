@@ -1,27 +1,110 @@
 @import "./variables";
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: $body-font-family;
+  font-size: 14px;
 }
 
 .container {
-  max-width: $max-width;
-  margin: auto;
+  // max-width: $max-width;
+  // margin: auto;
 
   header {
-    display: flex;
-    justify-content: space-between;
+    width: 100vw;
+    border-bottom: 1px solid rgba(0, 0, 0, .0975);
 
-    .signinBtn {
-      background-color: $primaryBtnColor;
-      border: $primaryBtnBorder;
-      padding: $primaryBtnPadding;
-      font-weight: $primaryBtnFontWeight;
-      font-display: Arial;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      height: 77px;
+      padding: 0 10px;
+      max-width: 1050px;
+      margin: auto;
+
+      a {
+        display: flex;
+      }
+
+      .logo {
+        width: 35px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .separator {
+        width: 1px;
+        height: 28px;
+        background: black;
+        margin: 0 16px;
+      }
+
+      .logo-text {
+        width: 103px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .searchBar {
+
+        position: relative;
+        width: 215px;
+
+        &::before {
+          content: url("../images/search-icon.png");
+          transform: scale(0.02);
+          display: block;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 40px;
+          top: 4px;
+        }
+
+        input {
+          background: #fafafa;
+          border: 1px solid #dbdbdb;
+          border-radius: 3px;
+          padding: 6px 10px 6px 60px;
+          width: 100%;
+
+          &::placeholder {
+            color: rgb(153, 153, 153);
+
+          }
+        }
+
+      }
+
+      .signinBtn {
+        background-color: $primaryColor;
+        border: $primaryBtnBorder;
+        padding: $primaryBtnPadding;
+        font-weight: $primaryBtnFontWeight;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .signupBtn {
+        color: $primaryColor;
+        border: 0;
+        background: #fff;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+
     }
-
   }
 }

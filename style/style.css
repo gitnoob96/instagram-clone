@@ -1,29 +1,121 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
-  max-width: 1050px;
-  margin: auto;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 .container header {
+  width: 100vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.container header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 77px;
+  padding: 0 10px;
+  max-width: 1050px;
+  margin: auto;
 }
 
-.container header .signinBtn {
+.container header .container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container header .container .logo {
+  width: 35px;
+}
+
+.container header .container .logo img {
+  width: 100%;
+}
+
+.container header .container .separator {
+  width: 1px;
+  height: 28px;
+  background: black;
+  margin: 0 16px;
+}
+
+.container header .container .logo-text {
+  width: 103px;
+}
+
+.container header .container .logo-text img {
+  width: 100%;
+}
+
+.container header .container .searchBar {
+  position: relative;
+  width: 215px;
+}
+
+.container header .container .searchBar::before {
+  content: url("../images/search-icon.png");
+  -webkit-transform: scale(0.02);
+          transform: scale(0.02);
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 40px;
+  top: 4px;
+}
+
+.container header .container .searchBar input {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 6px 10px 6px 60px;
+  width: 100%;
+}
+
+.container header .container .searchBar input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.container header .container .searchBar input:-ms-input-placeholder {
+  color: #999999;
+}
+
+.container header .container .searchBar input::-ms-input-placeholder {
+  color: #999999;
+}
+
+.container header .container .searchBar input::placeholder {
+  color: #999999;
+}
+
+.container header .container .signinBtn {
   background-color: #3897f0;
   border: 1px solid #3897f0;
   padding: 5px 9px;
   font-weight: 600;
-  font-display: Arial;
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.container header .container .signupBtn {
+  color: #3897f0;
+  border: 0;
+  background: #fff;
+  font-weight: 600;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=style.css.map */
