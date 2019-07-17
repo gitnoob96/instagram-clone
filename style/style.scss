@@ -9,6 +9,7 @@
 body {
   font-family: $body-font-family;
   font-size: 14px;
+  background-color: #fafafa;
 }
 
 .container {
@@ -16,6 +17,9 @@ body {
   // margin: auto;
 
   header {
+    background: #fff;
+    position: fixed;
+    top: 0;
     width: 100vw;
     border-bottom: 1px solid rgba(0, 0, 0, .0975);
 
@@ -26,7 +30,7 @@ body {
 
       height: 77px;
       padding: 0 10px;
-      max-width: 1050px;
+      max-width: $max-width;
       margin: auto;
 
       a {
@@ -61,28 +65,42 @@ body {
         position: relative;
         width: 215px;
 
-        &::before {
-          content: url("../images/search-icon.png");
-          transform: scale(0.02);
-          display: block;
-          width: 10px;
-          height: 10px;
-          position: absolute;
-          left: 40px;
-          top: 4px;
-        }
-
-        input {
-          background: #fafafa;
+        .placeholderSearch {
+          background-color: #fafafa;
           border: 1px solid #dbdbdb;
           border-radius: 3px;
           padding: 6px 10px 6px 60px;
+          color: rgb(153, 153, 153);
+
+          &::before {
+            content: url("../images/search-icon.png");
+            transform: scale(0.02);
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 40px;
+            top: 6px;
+          }
+        }
+
+
+        input {
+          border: 1px solid #dbdbdb;
+          border-radius: 3px;
           width: 100%;
+          padding: 6px 25px;
+          background: url("../images/search-icon.png");
+          background-repeat: no-repeat;
+          background-size: 10px;
+          background-position: 8px 8px;
+          display: none;
+
 
           &::placeholder {
             color: rgb(153, 153, 153);
-
           }
+
         }
 
       }
@@ -105,6 +123,64 @@ body {
         margin-left: 10px;
       }
 
+    }
+  }
+
+  .profile {
+    display: flex;
+    max-width: $max-width;
+    margin: auto;
+    margin-top: 90px;
+
+    .avatar {
+      padding: 50px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .description {
+      padding: 50px;
+
+      .infos {
+        display: flex;
+
+        .h2 {
+          padding: 0
+        }
+
+        .subscribeBtn {
+          background-color: $primaryColor;
+          border: $primaryBtnBorder;
+          padding: $primaryBtnPadding;
+          font-weight: $primaryBtnFontWeight;
+          color: white;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-left: 25px;
+        }
+      }
+
+      .stats {
+        padding: 20px 0;
+
+        span {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+
+  .publications {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .image {
+      margin-bottom: 25px;
     }
   }
 }

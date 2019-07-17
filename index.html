@@ -25,6 +25,7 @@
           </a>
         </div>
         <div class="searchBar">
+          <div class="placeholderSearch">Rechercher</div>
           <input type="text" placeholder="Rechercher">
         </div>
         <div class="connection">
@@ -33,7 +34,110 @@
         </div>
       </div>
     </header>
+
+    <div class="profile">
+      <div class="avatar">
+        <img src="https://picsum.photos/150/150" alt="">
+      </div>
+      <div class="description">
+        <div class="infos">
+          <h2>Username</h2>
+          <button class="subscribeBtn">S'abonner</button>
+        </div>
+        <div class="stats">
+          <span>X publications</span>
+          <span>X abonnés</span>
+          <span>X abonnements</span>
+        </div>
+        <div class="bio">
+          bio...
+        </div>
+      </div>
+    </div>
+
+    <div class="publications">
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+      <div class="image">
+        <img src="https://picsum.photos/300/300" alt="">
+      </div>
+    </div>
   </div>
 </body>
+
+<script>
+  var placeholderSearch = document.querySelector(".placeholderSearch");
+  var input = document.querySelector(".searchBar input");
+
+  placeholderSearch.addEventListener("click", function () {
+    this.style.display = "none";
+    input.style.display = "block"
+    input.focus();
+  });
+  input.addEventListener("blur", function () {
+
+    this.style.display = "none";
+    placeholderSearch.style.display = "block"
+    placeholderSearch.textContent = this.value || "Rechercher"
+  })
+</script>
 
 </html>
